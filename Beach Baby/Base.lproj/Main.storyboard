@@ -21,8 +21,8 @@
                                 <color key="textColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-F2-6UO">
-                                <rect key="frame" x="60" y="539" width="255" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-F2-6UO">
+                                <rect key="frame" x="60" y="536" width="255" height="42"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.90980392156862744" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" red="0.082352941176470587" green="0.19607843137254902" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,6 +43,9 @@
                             <constraint firstItem="Zhe-F2-6UO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="sCT-xY-0MV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="Zhe-F2-6UO" id="L7u-Nq-Ock"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

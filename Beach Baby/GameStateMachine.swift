@@ -31,9 +31,76 @@ enum GameState {
         case .start:
             return [.walkLeft, .walkRight]
         case .walkingLeftWeirdThing:
-            return [.walkLeft, .walkRight]
-        default:
+            return [.getNearWeirdThing, .keepWalking]
+        case .walkingRightSeagulls:
+            return [.run, .walkSlowly]
+        case .seeingWeirdThing:
+            return [.pokeWeirdThing, .keepWalking]
+        case .pokingWeirdThing:
+            return [.keepWalking]
+        case .walkingLeftDog:
+            return [.frightDog, .playWithDog]
+        case .playingWithDog:
+            return [.letDogGoAway]
+        case .walkingLeftTired:
+            return [.dig, .playWithSand]
+        case .digging:
+            return [.sit]
+        case .playingWithSand:
+            return [.sit]
+        case .running:
+            return [.keepWalking]
+        case .walkingSlowly:
+            return [.keepWalking]
+        case .walkingRight:
+            return [.sit, .keepWalking]
+        case .walkingLeft:
+            return [.keepWalking]
+        case .walkingRightShells:
+            return [.sit, .lookShells]
+        case .lookingShells:
+            return [.keepWalking]
+        case .sitting:
             return []
+        }
+    }
+    
+    var text: String {
+        switch self {
+        case .start:
+            return "Uma garotinha e seu cachorro"
+        case .walkingLeftWeirdThing:
+            return "Eles andam, há algo estranho no caminho"
+        case .walkingRightSeagulls:
+            return "Eles andam, há um grupo de gaivotas no caminho"
+        case .seeingWeirdThing:
+            return "Uma Água-Viva enorme e morta"
+        case .pokingWeirdThing:
+            return "Nada acontece, mas a textura é esquisita"
+        case .walkingLeftDog:
+            return "Os dois caminham pela areia. Um Vira-Lata caramelo anda na direção deles"
+        case .playingWithDog:
+            return "Os dois cachorros brincam na areia"
+        case .walkingLeftTired:
+            return "A garotinha e o cachorro continuam andando, mas parecem meio cansados"
+        case .digging:
+            return "Eles cavam"
+        case .playingWithSand:
+            return "A menina faz um castelo de areia"
+        case .running:
+            return "As gaivotas voam, mas logo retornam para continuar seu almoço"
+        case .walkingSlowly:
+            return "Três gaivotas comem um peixe enorme"
+        case .walkingRight:
+            return "A garota e o cachorro andam pela areia"
+        case .walkingLeft:
+            return "A garota e o cachorro andam pela areia"
+        case .walkingRightShells:
+            return "Os dois andam pela areia, há várias conchinhas pelo chão"
+        case .lookingShells:
+            return "Várias conchinhas de vários tamanhos e formatos"
+        case .sitting:
+            return "Eles não precisam fazer nada além de sentar, sentir o sol na pele, a areia nos dedos e olhar o mar"
         }
     }
 }
@@ -54,6 +121,38 @@ enum GameAction {
     case walkSlowly
     case run
     
+    var text: String {
+        switch self {
+        case .walkLeft:
+            return "Andar para esquerda"
+        case .walkRight:
+            return "Andar para direita"
+        case .getNearWeirdThing:
+            return "Se aproximar da coisa estranha"
+        case .keepWalking:
+            return "Continuar andando"
+        case .pokeWeirdThing:
+            return "Cutucar com um graveto"
+        case .frightDog:
+            return "Espantar o outro cachorro"
+        case .playWithDog:
+            return "Brincar com ele"
+        case .letDogGoAway:
+            return "Deixar o vira-lata ir embora"
+        case .dig:
+            return "Cavar um buraco"
+        case .playWithSand:
+            return "Fazer um castelo de areia"
+        case .sit:
+            return "Sentar na areia"
+        case .lookShells:
+            return "Olhar as conchinhas"
+        case .walkSlowly:
+            return "Andar devagar"
+        case .run:
+            return "Correr para assustar as gaivotas"
+        }
+    }
 }
 
 class GameStateMachine {
@@ -62,9 +161,9 @@ class GameStateMachine {
     func processAction(_ gameAction: GameAction) -> GameState {
         if currentState == .start {
             if gameAction == .walkRight {
-                return .walkingLeft
+                return .walkingLeftWeirdThing
             } else {
-                return .walkingRight
+                return .walkingRightSeagulls
             }
         }
         
@@ -153,7 +252,7 @@ class GameStateMachine {
         }
         
         if currentState == .lookingShells {
-            return .sitting
+            return .walkingRight
         }
         
         return .sitting
