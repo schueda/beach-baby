@@ -17,7 +17,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LsL-Sh-iAI">
                                 <rect key="frame" x="237" y="629" width="100" height="70"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.90980392160000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.81960784310000001" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="w4E-hC-Y45"/>
                                     <constraint firstAttribute="width" constant="100" id="ywW-HT-hRh"/>
@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="150" id="m2s-Aa-jBe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="24"/>
-                                <color key="textColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.74901960779999999" green="0.81960784310000001" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykv-Pm-uJO">
@@ -47,7 +47,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="DTL-RE-tIf">
                                 <rect key="frame" x="77" y="629" width="100" height="70"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.90980392160000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.81960784310000001" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="BXd-4f-5hT"/>
                                     <constraint firstAttribute="width" constant="100" id="FhG-eQ-YIc"/>
@@ -61,7 +61,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.74901960779999999" green="0.81960784310000001" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="71x-MN-8XI" secondAttribute="trailing" constant="30" id="4q3-NZ-z6g"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ykv-Pm-uJO" secondAttribute="trailing" constant="30" id="FPB-cx-tVi"/>

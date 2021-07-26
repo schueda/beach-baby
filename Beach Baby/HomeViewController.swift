@@ -15,10 +15,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 5
-        startButton.layer.shadowColor = UIColor.black.cgColor
-        startButton.layer.shadowOpacity = 0.3
-        startButton.layer.shadowRadius = 13
-        startButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        startButton.layer.shadowColor = UIColor(named: "shadowCollor")?.cgColor
+        startButton.layer.shadowOpacity = 0.75
+        startButton.layer.shadowRadius = 15
+        startButton.layer.shadowOffset = CGSize(width: 0, height: 13)
         
     }
 

@@ -175,7 +175,7 @@ enum GameAction {
         case .frightDog:
             return "Espantar o outro cachorro"
         case .playWithDog:
-            return "Brincar com ele"
+            return "Brincar com o outro cachorro"
         case .letDogGoAway:
             return "Deixar o vira-lata ir embora"
         case .dig:
