@@ -103,6 +103,45 @@ enum GameState {
             return "Eles não precisam fazer nada além de sentar, sentir o sol na pele, a areia nos dedos e olhar o mar"
         }
     }
+    
+    var imageName: String {
+        switch self {
+        case .start:
+            return "start"
+        case .walkingLeftWeirdThing:
+            return "walkingLeftWeirdThing"
+        case .walkingRightSeagulls:
+            return "walkingRightSeagulls"
+        case .seeingWeirdThing:
+            return "seeingWeirdThing"
+        case .pokingWeirdThing:
+            return "pokingWeirdThing"
+        case .walkingLeftDog:
+            return "walkingLeftDog"
+        case .playingWithDog:
+            return "playingWithDog"
+        case .walkingLeftTired:
+            return "walkingLeft"
+        case .digging:
+            return "digging"
+        case .playingWithSand:
+            return "playingWithSand"
+        case .running:
+            return "running"
+        case .walkingSlowly:
+            return "walkingSlowly"
+        case .walkingRight:
+            return "walkingRight"
+        case .walkingLeft:
+            return "walkingLeft"
+        case .walkingRightShells:
+            return "walkingRight"
+        case .lookingShells:
+            return "lookingShells"
+        case .sitting:
+            return "sitting"
+        }
+    }
 }
 
 enum GameAction {
@@ -161,9 +200,9 @@ class GameStateMachine {
     func processAction(_ gameAction: GameAction) -> GameState {
         if currentState == .start {
             if gameAction == .walkRight {
-                return .walkingLeftWeirdThing
-            } else {
                 return .walkingRightSeagulls
+            } else {
+                return .walkingLeftWeirdThing
             }
         }
         

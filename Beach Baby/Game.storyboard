@@ -22,6 +22,7 @@
                                     <constraint firstAttribute="height" constant="70" id="w4E-hC-Y45"/>
                                     <constraint firstAttribute="width" constant="100" id="ywW-HT-hRh"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
                                 <color key="tintColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -34,7 +35,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="m2s-Aa-jBe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="24"/>
                                 <color key="textColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
@@ -51,6 +52,7 @@
                                     <constraint firstAttribute="height" constant="70" id="BXd-4f-5hT"/>
                                     <constraint firstAttribute="width" constant="100" id="FhG-eQ-YIc"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
                                 <color key="tintColor" red="0.08235294118" green="0.1960784314" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>

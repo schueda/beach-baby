@@ -28,8 +28,12 @@ class GameViewController: UIViewController {
     
     func updateFromState(_ gameState: GameState) {
         label.text = gameState.text
-        image.image = UIImage(named: "start")
-        if gameState.possibleActions.count > 0 {
+        image.image = UIImage(named: gameState.imageName)
+        if gameState == .sitting {
+            leftButton.setTitle("Fim", for: .normal)
+            rightButton.alpha = 0
+        }
+        else if gameState.possibleActions.count > 0 {
             leftButton.alpha = 1
             leftButton.setTitle(gameState.possibleActions[0].text, for: .normal)
             if gameState.possibleActions.count > 1 {
@@ -68,8 +72,15 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func leftButtonClick(_ sender: Any) {
-        stateMachine.currentState = stateMachine.processAction(stateMachine.currentState.possibleActions[0])
-        updateFromState(stateMachine.currentState)
+        if stateMachine.currentState == .sitting {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false, completion: nil)
+        } else {
+            stateMachine.currentState = stateMachine.processAction(stateMachine.currentState.possibleActions[0])
+            updateFromState(stateMachine.currentState)
+        }
     }
     
     @IBAction func rightButtonClick(_ sender: Any) {

@@ -10,10 +10,16 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 5
+        startButton.layer.shadowColor = UIColor.black.cgColor
+        startButton.layer.shadowOpacity = 0.3
+        startButton.layer.shadowRadius = 13
+        startButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        
     }
 
     @IBAction func startTapped(_ sender: Any) {
